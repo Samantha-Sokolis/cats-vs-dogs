@@ -18,10 +18,18 @@
     {
         "dog_breed": "Daschund", 
         "size": "Small",
-        "temperament": "Affectionate, intelligent, friendly",
+        "temperament": "Clever, Stubborn, Devoted",
         "energy_level": "Active",
         "daily_walks": false,
         "description": "The dachshund, also known as a sausage dog, is a short-legged, long-bodied, hound-type dog breed. The dog may be smooth-haired, wire-haired, or long-haired, and comes in a variety of colors."
+    },
+    {
+        "dog_breed": "Greyhound", 
+        "size": "Small-Medium",
+        "temperament": "Affectionate, Athletic, Quiet, Gentle",
+        "energy_level": "Active",
+        "daily_walks": false,
+        "description": "The Greyhound, is a sighthound which has been bred for racing. Since the rise in large-scale adoption of retired racing Greyhounds, the breed has seen a resurgence in popularity as a family pet."
     }
 ]
 
