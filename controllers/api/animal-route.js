@@ -3,13 +3,13 @@ const { Animals, User, Comment} = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/Auth');
 
-// GET 'api/animals/' find all content 
+// GET 'api/animal/' find all content 
 router.get('/', (req, res) => {
     Animals.findAll({ 
         attributes: ['id','animal_type','animal_breed','size', 'temperament', 'description'],
         include: [{
             model: Comment,
-            attributes: ['id', 'text', 'user_id', 'animal_id', 'created_at'],
+            attributes: ['id', 'text', 'user_id', 'animal_id'],
             include: {
                 model: User,
                 attributes: ['username']
@@ -24,16 +24,16 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET by id, returns data when user pick on the animal
+// GET by id ('api/animal/:id) returns data when user pick on the animal
 router.get('/:id', (req, res) => {
-    post.findOne({
+    Animals.findOne({
         where: {
             id: req.params.id,
         },
         attributes: ['id','animal_type','animal_breed','size', 'temperament', 'description'],
         include: [{
             model: Comment,
-            attributes: ['id', 'text', 'user_id', 'animal_id', 'created_at'],
+            attributes: ['id', 'text', 'user_id', 'animal_id'],
             include: {
                 model: User,
                 attributes: ['username']

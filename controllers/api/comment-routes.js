@@ -3,7 +3,7 @@ const { Comment } = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/Auth');
 
-// GET all display all related comments when a animal/:id is viewed
+// GET all display all comments 'api/comments'
 router.get('/', (req, res) => {
     Comment.findAll({})
     .then((commentData) => res.json(commentData))
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET by id for a specific comment
+// GET by id for a specific comment 'api/comments/:id'
 router.get('/:id', (req, res) => {
     Comment.findAll({
         where: {
