@@ -25,8 +25,6 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET by animal type, returns data when user click on dogs or cats
-
 // GET by id, returns data when user pick on the breed of dogs/cats
 router.get('/:id', (req, res) => {
     post.findOne({
@@ -55,6 +53,8 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+// GET by animal type, returns data when user click on dogs or cats
 
 // POST route connects user session then creates new animal to database
 
