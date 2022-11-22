@@ -19,7 +19,8 @@ References for Seed Data:
 https://www.purina.com/cats/cat-breeds
 https://dogtime.com/dog-breeds/profiles
 
-
+Cloudinary:
+https://cloudinary.com/documentation/node_integration
 
 ## License
 

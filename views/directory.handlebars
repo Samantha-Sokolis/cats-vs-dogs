@@ -1,0 +1,8 @@
+<section class="container">
+  <h3 class="animal-directory">{{animal.name}}</h3>
+  <section class="flex-row justify-center">
+    {{#each directory.animal-card as |painting|}}
+    {{> animal-card}}
+    {{/each}}
+  </section>
+</section>
