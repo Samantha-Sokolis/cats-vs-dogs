@@ -26,3 +26,9 @@ Comment.belongsTo(Animals, {
     foreignKey: 'animal_id',
     onDelete: 'CASCADE'
 })
+
+module.exports = {
+    User,
+    Animals,
+    Comment,
+};
