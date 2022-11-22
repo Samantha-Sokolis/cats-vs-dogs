@@ -33,7 +33,7 @@ router.post('/', withAuth, (req, res) => {
         Comment.create({
             text: req.body.text,
             animal_id: req.body.animal_id,
-            user_id: req.session.user_id,
+            user_id: req.session.user_id
         })
         .then((commentData) => res.json(commentData))
         .catch((err) => {
@@ -44,6 +44,28 @@ router.post('/', withAuth, (req, res) => {
 });
 
 // PUT route update a comment if user is logged in
-
+router.put('/:id', withAuth, (req, res) => {
+    Comment.update(
+        {
+            text: req.body.text
+        },
+        {
+            where: {
+                id: req.params.id
+            },
+        }
+    )
+    .then((commentData) => {
+        if (!commentData) {
+            res.status(404).json({ message: 'No comment with this id'});
+            return;
+        }
+        res.json(commentData);
+    })
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 // DELETE route to delete comment using comment id 

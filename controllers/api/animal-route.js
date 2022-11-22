@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Animals, User, Comment} = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/Auth');
-const { post } = require('./user-routes');
 
 // GET 'api/animals/' find all content and post it on page
 router.get('/', (req, res) => {
