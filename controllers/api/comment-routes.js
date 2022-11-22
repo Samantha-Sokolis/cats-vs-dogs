@@ -28,7 +28,20 @@ router.get('/:id', (req, res) => {
 });
 
 // POST route created a comment and save it to db if user is logged in
-
+router.post('/', withAuth, (req, res) => {
+    if (req.session) {
+        Comment.create({
+            text: req.body.text,
+            animal_id: req.body.animal_id,
+            user_id: req.session.user_id,
+        })
+        .then((commentData) => res.json(commentData))
+        .catch((err) => {
+            console.log(err);
+            res.status(400).json(err);
+        });
+    }
+});
 
 // PUT route update a comment if user is logged in
 
