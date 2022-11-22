@@ -3,7 +3,7 @@ const { Animals, User, Comment} = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/Auth');
 
-// GET 'api/animals/' find all content and post it on page
+// GET 'api/animals/' find all content 
 router.get('/', (req, res) => {
     Animals.findAll({ 
         attributes: ['id','animal_type','animal_breed','size', 'temperament', 'description'],
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET by id, returns data when user pick on the breed of dogs/cats
+// GET by id, returns data when user pick on the animal
 router.get('/:id', (req, res) => {
     post.findOne({
         where: {
@@ -53,10 +53,9 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// GET by animal type, returns data when user click on dogs or cats
 
 // POST route connects user session then creates new animal to database
 
-// PUT by id route update selected animal data with new data
+// PUT by id route connects user session then updates selected animal data with new data
 
 // DELETE route remove animal from database
