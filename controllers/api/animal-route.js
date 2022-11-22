@@ -59,3 +59,5 @@ router.get('/:id', (req, res) => {
 // PUT by id route connects user session then updates selected animal data with new data
 
 // DELETE route remove animal from database
+
+module.exports = router;
