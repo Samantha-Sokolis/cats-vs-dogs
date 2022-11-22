@@ -1,4 +1,6 @@
-[
+const { Animals } = require('../models');
+
+const animalData = [
     {
         "animal_type": "dog",
         "animal_breed": "Golden Retriver", 
@@ -55,4 +57,8 @@
         "temperament": "social, intelligent and vocal",
         "description": "This highly intelligent feline will seek out things to occupy her mind. So if you don’t want your cat getting into mischief, give her puzzle feeders, games and more to keep her entertained."
     }
-]
+];
+
+const seedAnimals = () => Animals.bulkCreate(animalData);
+
+module.exports = seedAnimals;

@@ -26,4 +26,8 @@ const userData = [
         password: 'password',
         email: 'ig@email.com'
     },
-]
+];
+
+const seedUsers = () => User.bulkCreate(userData);
+
+module.exports = seedUsers;
