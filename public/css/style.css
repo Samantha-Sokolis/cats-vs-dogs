@@ -160,3 +160,39 @@
     align-items: center;
   }
   
+  /* here onwards relates to homepage */
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  padding: 5px;
+}
+
+.progress {
+  margin: 5px;
+  padding: 5px;
+}
+
+.bar{
+  height:27px;
+  width:0%;
+  background: #0dcaf0;
+  border-left: solid 2px #0dcaf0;
+  margin-bottom:4px;
+  transition: width 1s;
+  font-weight: bold;
+}
+
+.bar-green{
+  background:#ffc107;    
+  border-color:#ffc107;
+}
+
+#CatDog{
+text-align: center;
+font-weight: bold;
+}
+
