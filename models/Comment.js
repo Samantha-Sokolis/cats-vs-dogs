@@ -23,20 +23,12 @@ Comment.init(
                 key: 'id',
             }
         },
-        dog_breed: {
+        animal_id: {
             type: Datatypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
-                model: 'dogs',
-                key: 'dog_breed',
-            }
-        },
-        cat_breed: {
-            type: Datatypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'cats',
-                key: 'cat_breed',
+                model: 'animals',
+                key: 'id',
             }
         },
     },
