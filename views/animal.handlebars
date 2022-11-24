@@ -1,0 +1,36 @@
+<!-- wireframe 3 - animal breed detailes page -->
+<section class="container">
+  <h2 class="animal_breed">{{animal.animal-breed}}</h2>
+  <section class="flex-row justify-left">
+
+<div class="row">
+  <div class="column" style="background-color:rgb(193, 191, 191);">
+    {{#each animal.animal-breed as |animal|}}
+    {{> animal-details}}
+    {{/each}}
+  </div>
+
+<div class="column" style="background-color:#bbb;">
+    {{!-- Comments section for the detail page --}}
+    <h3>🐾</h3>
+    <br></br>
+    <h3>Comments:</h3>
+    </div>
+
+    <div class="comment card">
+    <p>{{comment.user_id}}: {{comment.text}}</p>
+    </div>
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Add comment here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Submit</button>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Image gallery or links to external pages here -->
+
+
+
