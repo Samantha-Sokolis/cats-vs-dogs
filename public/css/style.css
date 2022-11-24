@@ -188,8 +188,8 @@
 .bar{
   height:27px;
   width:0%;
-  background: #0dcaf0;
-  border-left: solid 2px #0dcaf0;
+  background: #ffffff;
+  border-left: solid 2px #8f8f8f;
   margin-bottom:4px;
   transition: width 1s;
   font-weight: bold;
