@@ -21,6 +21,14 @@
     
 </div>
 </section>
+<section class="container">
+  <h3 class="animal-directory">{{animal.animal_type}}</h3>
+  <section class="flex-row justify-center">
+    <!-- For each animal that belongs to this directory, the animal-card partial is used to render each animal's image and breed name -->
+    {{#each categories as |category|}}
+    {{> category-details}}
+    {{/each}}
+  </section>
+</section>
 
-
-<script src="./js/home.js"></script>
+<script src="/js/home.js"></script>
