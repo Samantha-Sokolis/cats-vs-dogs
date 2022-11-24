@@ -12,4 +12,10 @@ const sequelize = process.env.JAWSDB_URL
       },
     });
 
+    cloudinary.config({ 
+      cloud_name: 'dj99ibnyv', 
+      api_key: '687436637182371', 
+      api_secret: 'tEopDQoMPB7FTvR4NvHH_76iUMs' 
+    });
+    
 module.exports = sequelize;
