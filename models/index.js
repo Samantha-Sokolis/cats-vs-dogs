@@ -2,6 +2,7 @@
 const User = require('./User');
 const Animals = require('./Animals');
 const Comment = require('./Comment');
+const Category = require('./Category')
 
 // User has many comments
 User.hasMany(Comment, {
@@ -27,8 +28,19 @@ Comment.belongsTo(Animals, {
     onDelete: 'CASCADE'
 })
 
+//Category has many animals
+Category.hasMany(Animals, {
+    foreignKey: 'category_id',
+})
+
+//Animals belongs to Category
+Animals.belongsTo(Category, {
+    foreignKey: 'category_id',
+})
+
 module.exports = {
     User,
     Animals,
     Comment,
+    Category,
 };
