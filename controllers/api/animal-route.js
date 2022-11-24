@@ -3,6 +3,9 @@ const { Animals, User, Comment} = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/Auth');
 
+// Cloudinary class added
+var cloudinary = require('cloudinary').v2;
+
 // GET 'api/animal/' find all content 
 router.get('/', (req, res) => {
     Animals.findAll({ 
