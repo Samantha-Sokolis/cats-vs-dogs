@@ -1,9 +1,9 @@
 <section class="container">
-  <h3 class="animal-directory">{{animal.name}}</h3>
+  <h3 class="category">{{animal.animal_type}}</h3>
   <section class="flex-row justify-center">
     <!-- For each animal that belongs to this directory, the animal-card partial is used to render each animal's image and breed name -->
-    {{#each directory.animals as |animal|}}
-    {{> animal-card}}
+    {{#each category.animals as |animal|}}
+    {{> animal-details}}
     {{/each}}
   </section>
 </section>
