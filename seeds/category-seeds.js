@@ -9,6 +9,6 @@ const categoryData = [
   },
 ];
 
-const seedGallery = () => Gallery.bulkCreate(categoryData);
+const seedCategories = () => Gallery.bulkCreate(categoryData);
 
 module.exports = seedCategories;
