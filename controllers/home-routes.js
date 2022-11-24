@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     const categories = dbCategoryData.map((category) =>
-      gallery.get({ plain: true })
+      category.get({ plain: true })
     );
 
     // Send over the 'loggedIn' session variable to the 'homepage' template
