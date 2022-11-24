@@ -10,6 +10,14 @@
     --border-radius: 0.3rem;
   }
   
+  /* SAM has added .center for the hero image class */
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
   body {
     font-family: Arial;
     margin: 0;
