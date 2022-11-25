@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Animals, User, Comment} = require('../../models');
+const { Animal, User, Comment} = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/Auth');
 
@@ -8,7 +8,7 @@ var cloudinary = require('cloudinary').v2;
 
 // GET 'api/animal/' find all content 
 router.get('/', (req, res) => {
-    Animals.findAll({ 
+    Animal.findAll({ 
         attributes: ['id','animal_type','animal_breed','size', 'temperament', 'description'],
         include: [{
             model: Comment,
@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
 
 // GET by id ('api/animal/:id) returns data when user pick on the animal
 router.get('/:id', (req, res) => {
-    Animals.findOne({
+    Animal.findOne({
         where: {
             id: req.params.id,
         },

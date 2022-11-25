@@ -1,6 +1,6 @@
 // relationships
 const User = require('./User');
-const Animals = require('./Animals');
+const Animal = require('./Animal');
 const Comment = require('./Comment');
 const Category = require('./Category')
 
@@ -17,30 +17,30 @@ Comment.belongsTo(User, {
 })
 
 // Animals has many comment
-Animals.hasMany(Comment, {
+Animal.hasMany(Comment, {
     foreignKey: 'animal_id',
     onDelete: 'CASCADE'
 })
 
 // Comment belong to Animal
-Comment.belongsTo(Animals, {
+Comment.belongsTo(Animal, {
     foreignKey: 'animal_id',
     onDelete: 'CASCADE'
 })
 
 //Category has many animals
-Category.hasMany(Animals, {
+Category.hasMany(Animal, {
     foreignKey: 'category_id',
 })
 
 //Animals belongs to Category
-Animals.belongsTo(Category, {
+Animal.belongsTo(Category, {
     foreignKey: 'category_id',
 })
 
 module.exports = {
     User,
-    Animals,
+    Animal,
     Comment,
     Category,
 };
