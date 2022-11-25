@@ -1,4 +1,4 @@
-const { Category, Animals } = require('../models');
+const { Category, Animal } = require('../models');
 
 const router = require('express').Router();
 
@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
     const dbCategoryData = await Category.findAll({
       include: [
         {
-          model: Animals,
-          attributes: ['filename', 'description'],
+          model: Animal,
+          attributes: ['filename', 'description', 'animal_breed',],
         },
       ],
     });
@@ -35,7 +35,7 @@ router.get('/category/:id', async (req, res) => {
     const dbCategoryData = await Category.findByPk(req.params.id, {
       include: [
         {
-          model: Animals,
+          model: Animal,
           attributes: [
             'id',
             'animal_breed',
@@ -57,9 +57,9 @@ router.get('/category/:id', async (req, res) => {
 });
 
 // GET one animals
-router.get('/animals/:id', async (req, res) => {
+router.get('/animal/:id', async (req, res) => {
   try {
-    const dbAnimalData = await Animals.findByPk(req.params.id);
+    const dbAnimalData = await Animal.findByPk(req.params.id);
 
     const animal = dbAnimalData.get({ plain: true });
 

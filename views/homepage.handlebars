@@ -1,30 +1,34 @@
 <section>
   <a>
-    <img src="/public/images/cats_vs_dogs_hero.png" alt="cat and dog fighting with lightsabers" class="center">
+    <img src="/public/images/cats_vs_dogs_hero.jpg" alt="cat and dog fighting with lightsabers" class="center">
   </a>
 
   <div class="buttons">
-<button type="button" id="add1" class="btn btn-primary btn-lg">Vote Dog</button>
-<button type="button" id="add2" class="btn btn-primary btn-lg">Vote Cat</button>
+    <button type="button" id="add1" class="btn btn-primary btn-lg">Vote Dog</button>
+    <button type="button" id="add2" class="btn btn-primary btn-lg">Vote Cat</button>
+  </div>
 
-
-</div>
-<div class="progress">
+  <div class="progress">
     <h3> Vote results: </h3>
+    <div id="bar1" class="bar">
 
-<div id="bar1" class="bar"></div> 
-<div id="bar2" class="bar bar-green"></div>
+    </div>
+    <div id="bar2" class="bar bar-green">
+
+    </div>
+  </div> 
+
+  <div id="CatDog">
+
+  </div>
+</section>
 
 <br><br>
 
-<div id="CatDog"></div>
-    
-</div>
-</section>
 <section class="container">
   <h3 class="animal-directory">{{animal.animal_type}}</h3>
   <section class="flex-row justify-center">
-    <!-- For each animal that belongs to this directory, the animal-card partial is used to render each animal's image and breed name -->
+    <!-- For each category, the category-details partial is used to render the category data -->
     {{#each categories as |category|}}
     {{> category-details}}
     {{/each}}

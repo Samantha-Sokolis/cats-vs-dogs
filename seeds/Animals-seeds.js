@@ -1,4 +1,4 @@
-const { Animals } = require('../models');
+const { Animal } = require('../models');
 
 const animalData = [
     {
@@ -76,6 +76,6 @@ const animalData = [
     }
 ];
 
-const seedAnimals = () => Animals.bulkCreate(animalData);
+const seedAnimals = () => Animal.bulkCreate(animalData);
 
 module.exports = seedAnimals;
