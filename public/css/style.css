@@ -58,22 +58,22 @@
     color: var(--light);
   }
   
-  nav {
+  /* nav {
     display: flex;
     background-color: var(--secondary);
-  }
+  } */
   
-  nav a {
+  /* nav a {
     color: var(--light);
     padding: 14px 20px;
     text-decoration: none;
     text-align: right;
-  }
+  } */
   
-  nav a:hover {
+  /* nav a:hover {
     color: var(--secondary);
     background-color: var(--dark);
-  }
+  } */
   
   .gallery {
     flex: 4;
@@ -207,3 +207,6 @@ text-align: center;
 font-weight: bold;
 }
 
+.heroImage{
+  justify-content: center;
+}
