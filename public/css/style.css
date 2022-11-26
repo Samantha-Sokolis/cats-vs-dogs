@@ -96,10 +96,10 @@
     margin-left: 16px;
   }
   
-  img {
+  /* img {
     max-width: 100%;
     height: auto;
-  }
+  } */
   
   .details {
     width: 50%;
@@ -209,4 +209,10 @@ font-weight: bold;
 
 .heroImage{
   justify-content: center;
+}
+
+.center-header{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
