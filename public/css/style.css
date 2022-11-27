@@ -59,7 +59,6 @@
     transition: color 0.1s;
     margin-left: 16px;
   }
-
   
   /* .details and .animal-details are the CARDS and text of the animal details cards  */ 
   .details {
@@ -75,6 +74,7 @@
     font-weight: normal;
   }
   
+
   /* CARDS - Category-details Handlebar - these appear on the homepage */
   .card {
     margin: 20px;
@@ -106,7 +106,7 @@
     text-transform: uppercase;
     margin: 0;
     background-color: var(--quatrinary);
-    padding: 1px;
+    padding: 5px;
     border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
   }
   
