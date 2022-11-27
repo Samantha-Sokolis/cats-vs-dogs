@@ -31,13 +31,17 @@ Heroku URL -
 - To install necessary dependencies, run the following commands:
 npm i OR npm install
 
+- Note that the herokuapp deployment would have the dependencies installed
+
 ## Usage
-- To create the database using schema.sql, open MySQL terminal (Mysql -u root -p) in the 'db' folder. Once logged into the MySQL terminal by inputting your password. type 'SOURCE schema.sql'. Your database would then be created and you can simply exit MySQL terminal by typing 'exit'.
-- Alternatively, you can open MySQL terminal anywhere, log into MySQL, and type 'SOURCE C:\\(filepath)\cats-vs-dogs\db\schema.sql' 
+- Visit the deployed application to use.
+- Users would be directed to the homepage of 'Cats Vs Dogs' Where they can vote, log in, browse cats/dogs, view the available breeds in our db as well as commenting on these breeds using an logged in account.
 
-- To seed the data, type 'npm run seed' in the terminal in 'cats-vs-dogs' directory.
-
-- To run the application, type 'npm start' in the terminal. Note that you have to be in the directories location where the dependencies had been installed (in this case the folder 'cats-vs-dogs') to run the application.
+- Backend (Run application locally)
+  - To create the database using schema.sql, open MySQL terminal (Mysql -u root -p) in the 'db' folder. Once logged into the MySQL terminal by inputting your password. type 'SOURCE schema.sql'. Your database would then be created and you can simply exit MySQL terminal by typing 'exit'.
+  - Alternatively, you can open MySQL terminal anywhere, log into MySQL, and type 'SOURCE C:\\(filepath)\cats-vs-dogs\db\schema.sql' 
+  - To seed the data, type 'npm run seed' in the terminal in 'cats-vs-dogs' directory.
+  - To run the application in local, type 'npm start' in the terminal. Note that you have to be in the directories location where the dependencies had been installed (in this case the folder 'cats-vs-dogs') to run the application.
 
 ## Demo
 - ![](public/images/Catsvsdogs.gif)
