@@ -152,8 +152,8 @@ progress {
 
 .bar{
   height:27px;
-  width:0%;
-  background: #ffffff;
+  width:19%;
+  background: #655aff;
   border-left: solid 2px #ffffff;
   margin-bottom:4px;
   transition: width 1s;
