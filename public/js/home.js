@@ -1,5 +1,5 @@
-var count = 0;
-var count1= 0;
+var count= 30;
+var count1= 30;
 var countEl = document.querySelector("#bar1");
 var countEl2 = document.querySelector("#bar2");
 var nav = document.querySelector("#CatDog")
@@ -8,18 +8,18 @@ function setVotes(ans_id, ans_prc){
 	var bar = document.getElementById(ans_id).style.width = ans_prc + '%';
 }
 
-var b1 = b2 = b3 = 0;
+var b1 = b2 = b3 = 19;
 
 document.getElementById('add1').onclick = function(){
-    b1 += 10;
-	setVotes('bar1', b1);
+    // b1 += 5;
+	// setVotes('bar1', b1);
     count++;
     setCounterDog();
     nav.textContent = "View Dogs ⬇"
 }
 document.getElementById('add2').onclick = function(){
-    b2 += 10;
-	setVotes('bar2', b2);
+    // b2 += 5;
+	// setVotes('bar2', b2);
     count1++;
     setCounterCat();
     nav.textContent = "View Cats ⬇"
@@ -43,8 +43,8 @@ function getCountDog() {
 var storedVotes = localStorage.getItem("upvoteDog");
    
 if (storedVotes === null) {
-    count = 0;
-    countEl.textContent = ""
+    count = 30;
+    countEl.textContent = "Dogs - 30 votes"
   } else {
     // If a value is retrieved from client storage set the counter to that value
     count = storedVotes;
@@ -62,20 +62,21 @@ function getCountCat() {
     var storedVotes = localStorage.getItem("upvoteCat");
        
     if (storedVotes === null) {
-        count1 = 0;
-        countEl2.textContent = ""
+        count1 = 30;
+        countEl2.textContent = "Cats - 30 votes"
       } else {
         // If a value is retrieved from client storage set the counter to that value
         count1 = storedVotes;
     
         //Render vote count to page
-        countEl.textContent = "Cats - " + count1 + " votes";
+        countEl2.textContent = "Cats - " + count1 + " votes";
       }
     }
 
 
 function init() {
-    getCountDog()    
+    getCountDog();
+    getCountCat()  
 }
 
 init()

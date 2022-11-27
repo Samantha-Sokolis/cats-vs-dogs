@@ -24,13 +24,13 @@ Over the last few years, may it be due to covid-19, a trend in raising pets had 
 - [License](#license)
 
 ## Deployment
-Heroku URL - 
+Heroku URL - https://catsvsdogs1.herokuapp.com/
 
 ## Installation
 - To install necessary dependencies, run the following commands:
 npm i OR npm install
 
-- Note that the herokuapp deployment would have the dependencies installed
+- Note that the herokuapp deployment would have the dependencies and seeding pre-installed
 
 ## Usage
 - Visit the deployed application to use.
