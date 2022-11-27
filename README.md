@@ -20,9 +20,8 @@ Over the last few years, may it be due to covid-19, a trend in raising pets had 
 - [Technology](#technology)
 - [Credits](#credits)
 - [Tests](#tests)
-- [License](#license)
 - [Future Development](#future-development)
-
+- [License](#license)
 
 ## Deployment
 Heroku URL - 
@@ -74,15 +73,15 @@ https://www.youtube.com/watch?v=-6TUfJTBR1c
 ## Tests
 - API routes could be tested through Insomnia 
 
-## License
-- This project is licensed under MIT license.
-
 ## Future development
 - User profile page where users can upload pictures of their own dog/cat via cloudinary npm package and share/show to other users.
 - Ability to upvote/like a specific dog/cat breed on the animal contents page (done through editing the model/api routes), which then would give users an option to look for most popular dog/cats
 - Ability to reply to comments, space where discussions and tips can be shared among users
 - Idea - Include more pet variety, other than just cats and dogs.
 - Include pet adoption api's where users would have an option to look for available dogs/cats to adopt depending on what they selected.
+
+## License
+- This project is licensed under MIT license.
 
 
 
