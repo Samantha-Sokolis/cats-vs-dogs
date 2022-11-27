@@ -1,4 +1,4 @@
-const { Category, Animal } = require('../models');
+const { Category, Animal, Comment, User } = require('../models');
 
 const router = require('express').Router();
 
@@ -59,7 +59,19 @@ router.get('/category/:id', async (req, res) => {
 // GET one animals
 router.get('/animal/:id', async (req, res) => {
   try {
-    const dbAnimalData = await Animal.findByPk(req.params.id);
+    const dbAnimalData = await Animal.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [
+        {
+          model: Comment,
+          include: [
+            { model: User }
+          ]
+        },
+      ],
+    });
 
     const animal = dbAnimalData.get({ plain: true });
 
