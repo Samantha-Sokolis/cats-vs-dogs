@@ -63,7 +63,7 @@ router.get('/animal/:id', async (req, res) => {
 
     const animal = dbAnimalData.get({ plain: true });
 
-    res.render('painting', { painting });
+    res.render('animal', { animal });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
