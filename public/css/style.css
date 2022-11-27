@@ -101,6 +101,7 @@
     height: auto;
   } */
   
+  /* .details and .animal-details are the CARDS and text of the animal details cards  */ 
   .details {
     width: 50%;
     background-color: white;
@@ -208,6 +209,7 @@ font-weight: bold;
 }
 
 .heroImage{
+  padding-top: 50px;
   justify-content: center;
 }
 
