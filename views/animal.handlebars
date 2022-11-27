@@ -5,24 +5,22 @@
 
 <div class="row">
   <div class="column" style="background-color:white;">
-    <section class="details">
+    <section class="details animal-details">
       <img src="/images/{{animal.filename}}" alt="{{animal.description}}">
-      <div class="animal-details">
-        <p>Size: {{animal.size}}</p>
-        <p>Temperament: {{animal.temperament}}</p>
-        <p>Description: {{animal.description}}</p>
-    </div>
-</section>
+      <p>Size: {{animal.size}}</p>
+      <p>Temperament: {{animal.temperament}}</p>
+      <p>Description: {{animal.description}}</p>
+    </section>
   </div>
 
-<div class="column" style="background-color:#bacdf6;">
+<div class="column">
     {{!-- Comments section for the detail page --}}
     <h3>🐾</h3>
     <h3>Comments:</h3>
     
     </div>
 
-    <div class="comment card">
+    <div class="comment-card">
       {{#if animal.comments}}
       <ul>
         {{#each animal.comments as |comment|}}
@@ -35,12 +33,15 @@
       {{/if}}
     </div>
 
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Add comment here" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button">Submit</button>
-  </div>
-</div>
+  <form class="input-group mb-3" id="comment-form">
+    <input type="text" class="form-control" id="comment" name="comment-body" placeholder="Add comment here" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+    <button class="btn btn-outline-secondary" type="submit">Submit</button>  
+  </form>
+
+  {{#if loggedIn}}
+  <script src = '/js/comment.js'></script>
+  {{/if}}
+  
 </div>
 </section>
 
