@@ -5,24 +5,22 @@
 
 <div class="row">
   <div class="column" style="background-color:white;">
-    <section class="details">
+    <section class="details animal-details">
       <img src="/images/{{animal.filename}}" alt="{{animal.description}}">
-      <div class="animal-details">
-        <p>Size: {{animal.size}}</p>
-        <p>Temperament: {{animal.temperament}}</p>
-        <p>Description: {{animal.description}}</p>
-    </div>
-</section>
+      <p>Size: {{animal.size}}</p>
+      <p>Temperament: {{animal.temperament}}</p>
+      <p>Description: {{animal.description}}</p>
+    </section>
   </div>
 
-<div class="column" style="background-color:#bacdf6;">
+<div class="column">
     {{!-- Comments section for the detail page --}}
     <h3>🐾</h3>
     <h3>Comments:</h3>
     
     </div>
 
-    <div class="comment card">
+    <div class="comment-card">
       {{#if animal.comments}}
       <ul>
         {{#each animal.comments as |comment|}}
