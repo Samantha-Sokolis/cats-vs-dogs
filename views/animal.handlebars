@@ -33,12 +33,15 @@
       {{/if}}
     </div>
 
-<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Add comment here" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button">Submit</button>
-  </div>
-</div>
+  <form class="input-group mb-3" id="comment-form">
+    <input type="text" class="form-control" id="comment" name="comment-body" placeholder="Add comment here" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+    <button class="btn btn-outline-secondary" type="submit">Submit</button>  
+  </form>
+
+  {{#if loggedIn}}
+  <script src = '/js/comment.js'></script>
+  {{/if}}
+  
 </div>
 </section>
 

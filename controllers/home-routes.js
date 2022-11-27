@@ -63,11 +63,25 @@ router.get('/animal/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
+      attributes: [
+        'id',
+        'animal_breed',
+        'size',
+        'temperament',
+        'description',
+        'filename',
+      ],
       include: [
         {
           model: Comment,
+          attributes: [
+            'id',
+            'text',
+            'animal_id',
+            'user_id',
+          ],
           include: [
-            { model: User }
+            { model: User, attributes: ['username'] }
           ]
         },
       ],
