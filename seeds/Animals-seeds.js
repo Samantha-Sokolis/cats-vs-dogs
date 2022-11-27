@@ -3,7 +3,7 @@ const { Animal } = require('../models');
 const animalData = [
     {
         "animal_type": "dog",
-        "animal_breed": "Golden Retriver", 
+        "animal_breed": "Golden Retriever", 
         "size": "Medium-large",
         "temperament": "Friendly, energetic, loyal",
         "description": "A Scottish breed of retriever dog characterised by a gentle and affectionate nature and a striking golden coat.",
