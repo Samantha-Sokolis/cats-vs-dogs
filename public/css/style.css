@@ -1,11 +1,8 @@
 /*handlebars are complete */
 :root {
-    --primary: #000000;
-    --secondary: #9e9e9e;
-    --tertiary: #221f25;
-    --quatrinary: #ffffff;
-    --light: #e3e4e3;
-    --dark: #020303;
+    --dark: #000000;
+    --light: white;
+    --blue: #bacdfb;
     --error: rgb(228, 46, 1);
     --border-radius: 0.3rem;
   }
@@ -25,7 +22,7 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--quatrinary);
+    background-color: var(--white);
   }
   
   a {
@@ -40,8 +37,8 @@
   header {
     padding: 40px;
     text-align: center;
-    background: var(--primary);
-    color: var(--light);
+    background: var(--blue);
+    color: var(--dark);
   }
   
   main {
@@ -51,40 +48,6 @@
     justify-content: space-evenly;
   }
   
-  aside {
-    flex: 0;
-    background-color: var(--tertiary);
-    padding: 80px;
-    text-align: left;
-    color: var(--light);
-  }
-  
-  /* nav {
-    display: flex;
-    background-color: var(--secondary);
-  } */
-  
-  /* nav a {
-    color: var(--light);
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: right;
-  } */
-  
-  /* nav a:hover {
-    color: var(--secondary);
-    background-color: var(--dark);
-  } */
-  
-  .gallery {
-    flex: 4;
-    background-color: #fff;
-    padding: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
   
   .btn-no-style {
     background: none;
@@ -96,15 +59,11 @@
     transition: color 0.1s;
     margin-left: 16px;
   }
-  
-  /* img {
-    max-width: 100%;
-    height: auto;
-  } */
+
   
   /* .details and .animal-details are the CARDS and text of the animal details cards  */ 
   .details {
-    width: 50%;
+    width: 59%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
@@ -126,27 +85,28 @@
     text-align: center;
     padding: 10px 20px;
     font-weight: light;
+    justify-content: center;
   }
   
+
   .login-card {
-    margin-left: auto;
-    margin-right: auto;
-    flex: 0 0 500%;
+    margin: 20px;
+    flex: 0 1 300px;
     max-width: 200%;
-    padding: 10%;
-    border: 3px solid var(--dark);
-    background-color: #1a2627;
-    color: var(--light);
-    display: block
+    padding: 10px 20px;
+    border: 3px solid var(--blue);
+    background-color: var(--light);
+    color: var(--dark);
+    display: block;
   }
   
-  .card header {
+  .card-header {
     color: var(--light);
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
-    background-color: var(--tertiary);
-    padding: 0.625rem;
+    background-color: var(--quatrinary);
+    padding: 1px;
     border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
   }
   
@@ -182,11 +142,10 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin: 3px;
-  padding: 5px;
+  padding: 10px;
 }
 
-.progress {
+progress {
   margin: 5px;
   padding: 5px;
 }
@@ -209,6 +168,8 @@
 #CatDog{
 text-align: center;
 font-weight: bold;
+margin: 5px;
+padding: 5px;
 }
 
 .heroImage{

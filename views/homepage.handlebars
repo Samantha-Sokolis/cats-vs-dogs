@@ -6,21 +6,20 @@
   </a>
 
   <div class="buttons">
-    <button type="button" id="add1" class="btn btn-primary btn-lg">Vote Dog</button>
-    <button type="button" id="add2" class="btn btn-primary btn-lg">Vote Cat</button>
+    <button type="button" id="add1" class="btn btn-dark btn-lg">Vote Dog</button>
+    <button type="button" id="add2" class="btn btn-dark btn-lg">Vote Cat</button>
   </div>
 
   <div class="progress">
-    <h3> Vote results: </h3>
+    <h5> Vote results: </h5>
     <div id="bar1" class="bar">
-
     </div>
     <div id="bar2" class="bar bar-green">
-
     </div>
   </div> 
 
   <div id="CatDog">
+  </div>
 
   </div>
 </section>
@@ -28,6 +27,7 @@
 <br><br>
 
 <section class="container">
+  <div class="row">
   <h3 class="animal-directory">{{animal.animal_type}}</h3>
   <section class="flex-row justify-center">
     <!-- For each category, the category-details partial is used to render the category data -->
