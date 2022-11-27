@@ -5,20 +5,33 @@
 
 <div class="row">
   <div class="column" style="background-color:rgb(193, 191, 191);">
-    {{#each animal.animal_breed as |animal|}}
-    {{> animal-details}}
-    {{/each}}
+    <section class="details">
+      <img src="/images/{{animal.filename}}" alt="{{animal.description}}">
+      <div class="animal-details">
+        <p>Size: {{animal.size}}</p>
+        <p>Temperament: {{animal.temperament}}</p>
+        <p>Description: {{animal.description}}</p>
+    </div>
+</section>
   </div>
 
 <div class="column" style="background-color:#bbb;">
     {{!-- Comments section for the detail page --}}
     <h3>🐾</h3>
-    <br></br>
     <h3>Comments:</h3>
     </div>
 
     <div class="comment card">
-    <p>{{comment.user_id}}: {{comment.text}}</p>
+      {{#if animal.comments}}
+      <ul>
+        {{#each animal.comments as |comment|}}
+        <li>
+          <p>{{comment.text}}</p>
+          <p> - {{comment.user.username}}</p>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
     </div>
 
 <div class="input-group mb-3">
