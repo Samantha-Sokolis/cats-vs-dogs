@@ -2,13 +2,13 @@
 async function commentFormHandle(event) {
     event.preventDefault();
     
-    const text = document.querySelector('input[name="comment-body"]').ariaValueMax.trim();
+    const comment_text = document.querySelector('input[name="comment-body"]').ariaValueMax.trim();
 
     const animal_id = window.location.toString().split("/")[
         window.location.toString().split("/").length - 1
     ];
 
-    if (text) {
+    if (comment_text) {
         const response = await fetch('/api/comments', {
             method: "POST",
             body: JSON.stringify({
@@ -28,4 +28,4 @@ async function commentFormHandle(event) {
     }
 }
 
-document.querySelector("#.comment-form").addEventListener("submit", commentFormHandle);
+document.querySelector(".comment-form").addEventListener("submit", commentFormHandle);
