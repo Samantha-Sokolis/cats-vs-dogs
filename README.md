@@ -43,9 +43,9 @@ npm i OR npm install
   - To run the application in local, type 'npm start' in the terminal. Note that you have to be in the directories location where the dependencies had been installed (in this case the folder 'cats-vs-dogs') to run the application.
 
 ## Demo
-- ![](public/images/screenshot1.jpg)
-- ![](public/images/screenshot2.jpg)
-- ![](public/images/screenshot3.jpg)
+![](public/images/screenshot1.jpg)
+![](public/images/screenshot2.jpg)
+![](public/images/screenshot3.jpg)
 
 ## Technology
 - Javascript
