@@ -42,7 +42,7 @@
   }
   
   main {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: space-evenly;
@@ -62,7 +62,7 @@
   
   /* .details and .animal-details are the CARDS and text of the animal details cards  */ 
   .details {
-    width: 59%;
+    /* width: 59%; */
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
@@ -131,7 +131,7 @@
   .container {
     display: flex;
     flex-flow: column wrap;
-    align-content: flex-start;
+    /* align-content: flex-start; */
     align-items: center;
   }
   
